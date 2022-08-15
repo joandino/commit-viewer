@@ -24,7 +24,7 @@ export default function Commits() {
 
     const getCommits = async () => {
         setCommits([]);
-        
+
         const res = await axios.get('https://api.github.com/repos/joandino/commit-viewer/commits', {
             headers: {
                 'Authorization': `token ${process.env.REACT_APP_GITHUB_PERSONAL_TOKEN}` 
@@ -38,8 +38,8 @@ export default function Commits() {
 
     const renderCommits = () => {
         const alldates = _.groupBy(commits, function(obj) {
-            const date = new Date(obj.commit.author.date).toISOString().slice(0, 10);
-            return date;
+            const date = new Date(obj.commit.author.date);
+            return (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
         });
 
         const mappedCommits = Object.entries(alldates)
