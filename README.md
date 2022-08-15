@@ -1,10 +1,12 @@
 # Live demo
 
-Here you can test a live demo of this project: [Demo](https://legendary-melba-2b8c39.netlify.app/)
+Here you can test a live demo of this project: [Demo](https://bucolic-piroshki-2c4c7a.netlify.app/)
 
 # Instructions
 
 To run this project locally you need to create in the root of the project folder a file named '.env' and paste the content of the file '.env.example'.
+
+NOTE: The Github API Token is just for test, you'll need to create one to test successfully.
 
 In the project directory, you can run:
 
