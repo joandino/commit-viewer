@@ -25,7 +25,7 @@ export default function Commits() {
     const getCommits = async () => {
         setCommits([]);
 
-        const res = await axios.get('https://api.github.com/repos/joandino/commit-viewer/commits', {
+        const res = await axios.get(`https://api.github.com/repos/${process.env.REACT_APP_GITHUB_USERNAME}/${process.env.REACT_APP_GITHUB_REPO}/commits`, {
             headers: {
                 'Authorization': `token ${process.env.REACT_APP_GITHUB_PERSONAL_TOKEN}` 
             }
